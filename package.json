@@ -1,0 +1,22 @@
+{
+  "name": "rpp2205-sheeva-service",
+  "version": "1.0.0",
+  "description": "questions and answers SDC",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rpp2205-sdc-namib/rpp2205-sheeva-service.git"
+  },
+  "author": "Sheeva Haghighat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rpp2205-sdc-namib/rpp2205-sheeva-service/issues"
+  },
+  "homepage": "https://github.com/rpp2205-sdc-namib/rpp2205-sheeva-service#readme",
+  "devDependencies": {
+    "jest": "^29.3.0"
+  }
+}
