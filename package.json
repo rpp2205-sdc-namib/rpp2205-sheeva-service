@@ -4,7 +4,8 @@
   "description": "questions and answers SDC",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "db": "node database/index.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "homepage": "https://github.com/rpp2205-sdc-namib/rpp2205-sheeva-service#readme",
   "devDependencies": {
     "jest": "^29.3.0"
+  },
+  "dependencies": {
+    "mongoose": "^6.7.2"
   }
 }
