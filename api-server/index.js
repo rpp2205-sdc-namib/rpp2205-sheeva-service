@@ -1,27 +1,25 @@
-require("dotenv").config();
-const axios = require('axios');
+//require("dotenv").config();
+//const axios = require('axios');
 const express = require('express');
-const logger = require("./middleware/logger");
+const logger = require('./middleware/logger.js');
 const controller = require('./controller/helper.js');
 
 const app = express();
-const port = process.env.PORT;
+const port = 3000;
 
 
 app.use(express.json());
 app.use(express.urlencoded());
-//app.use(logger);
-//app.get('/products/:product_id', getProductHandler);
+app.use(logger);
 
-
-app.get('/qa/questions');
-app.get('/qa/questions/:question_id/answers');
-app.post('/qa/questions');
-app.post('/qa/questions/:question_id/answers');
-app.put('/qa/questions/:question_id/helpful');
-app.put('/qa/questions/:question_id/report');
-app.put('/qa/answers/:answer_id/helpful');
-app.put('/qa/answers/:answer_id/report');
+app.get('/qa/questions', controller.getQuestions);
+app.get('/qa/questions/:question_id/answers', controller.getAnswers);
+app.post('/qa/questions', controller.postQuestions);
+app.post('/qa/questions/:question_id/answers', controller.postAnswers);
+app.put('/qa/questions/:question_id/helpful', controller.putQuestionsHelpfulness);
+app.put('/qa/questions/:question_id/report', controller.putQuestionsReported);
+app.put('/qa/answers/:answer_id/helpful', controller.putAnswersHelpfulness);
+app.put('/qa/answers/:answer_id/report', controller.putAnswersReported);
 
 
 app.listen(port, () => {
