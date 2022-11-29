@@ -1,9 +1,11 @@
 const axios = require('axios');
+require("dotenv").config();
+var path = `http://localhost:${process.env.PORT}`;
 
 test('test api', () => {
   axios({
     method: 'get',
-    url: 'http://localhost:3000/qa/questions',
+    url: `${path}/qa/questions`,
   }).then(() => {
     expect(1+1).toBe(2);
   })
