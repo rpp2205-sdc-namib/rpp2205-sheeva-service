@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "db": "node database/index.js"
+    "db": "node database/index.js",
+    "server": "npx nodemon api-server/index.js"
   },
   "repository": {
     "type": "git",
