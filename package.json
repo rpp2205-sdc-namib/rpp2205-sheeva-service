@@ -4,7 +4,7 @@
   "description": "questions and answers SDC",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "db": "node database/index.js",
     "server": "npx nodemon api-server/index.js"
   },
