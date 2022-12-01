@@ -1,8 +1,7 @@
 module.exports = {
-  getQuestions: (req, res, next) => {
+  getQuestions: (req, res) => {
     console.log('GET QUESTIONS');
     res.send();
-    next();
   },
 
   getAnswers: (req, res) => {
